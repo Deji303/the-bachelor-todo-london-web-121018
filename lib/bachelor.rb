@@ -15,7 +15,7 @@ end
 def get_contestant_name(data, occupation)
   name = ""
   
-  data.values.each{|x| x.each{|y|  binding.pry}}
+  data.values.each{|x| x.each{|y|  y["occupation"] == occupation ? name = y["name"] : nil}}
   name
 end
 
